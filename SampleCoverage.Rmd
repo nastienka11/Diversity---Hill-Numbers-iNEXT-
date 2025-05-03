@@ -1,0 +1,46 @@
+---
+title: "Diversidad_Hill_Tax"
+author: "Nastienka Yael Perez Jimenez"
+date: "2024-03-21"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(iNEXT)
+library(entropart)
+```
+
+
+```{r}
+mur_tax <- read.csv("mur_df.csv", header = TRUE)
+View(mur_tax)
+```
+
+
+```{r}
+mur_tax_mer <- mur_tax[, 1:4]
+mur_tax_mer <- subset(mur_tax_mer, rowSums(mur_tax_mer != 0) > 0)
+View(mur_tax_mer)
+```
+
+
+### Sample Coverage
+
+```{r}
+MC_mur_tax_mer <- MetaCommunity(mur_tax_mer)
+
+MC_mur_tax_mer$Nsi
+MC_mur_tax_mer$N
+MC_mur_tax_mer$Nspecies
+MC_mur_tax_mer$Ni
+MC_mur_tax_mer$SampleCoverage
+MC_mur_tax_mer$SampleCoverage.communities
+```
+
+
+
+
+
+
+
