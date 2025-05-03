@@ -22,34 +22,34 @@ View(mur_tax)
 ## Region 1
 
 ```{r}
-mur_tax_mer <- mur_tax[, 1:4]
-mur_tax_mer <- subset(mur_tax_mer, rowSums(mur_tax_mer != 0) > 0)
-View(mur_tax_mer)
+mur_tax_1 <- mur_tax[, 1:4]
+mur_tax_1 <- subset(mur_tax_1, rowSums(mur_tax_1 != 0) > 0)
+View(mur_tax_1)
 
-MC_mur_tax_mer <- MetaCommunity(mur_tax_mer)
+MC_mur_tax_1 <- MetaCommunity(mur_tax_mer)
 
-MC_mur_tax_mer$Nsi
-MC_mur_tax_mer$N
-MC_mur_tax_mer$Nspecies
-MC_mur_tax_mer$Ni
-MC_mur_tax_mer$SampleCoverage
-MC_mur_tax_mer$SampleCoverage.communities
+MC_mur_tax_1$Nsi
+MC_mur_tax_1$N
+MC_mur_tax_1$Nspecies
+MC_mur_tax_1$Ni
+MC_mur_tax_1$SampleCoverage
+MC_mur_tax_1$SampleCoverage.communities
 ```
 
 ## Region 2
 ```{r}
-mur_tax_tiz <- mur_tax[, 5:7]
-mur_tax_tiz <- subset(mur_tax_tiz, rowSums(mur_tax_tiz != 0) > 0)
-View(mur_tax_tiz)
+mur_tax_2 <- mur_tax[, 5:7]
+mur_tax_2 <- subset(mur_tax_2, rowSums(mur_tax_2 != 0) > 0)
+View(mur_tax_2)
 
-MC_mur_tax_tiz <- MetaCommunity(mur_tax_tiz)
+MC_mur_tax_2 <- MetaCommunity(mur_tax_2)
 
-MC_mur_tax_tiz$Nsi
-MC_mur_tax_tiz$N
-MC_mur_tax_tiz$Nspecies
-MC_mur_tax_tiz$Ni
-MC_mur_tax_tiz$SampleCoverage
-MC_mur_tax_tiz$SampleCoverage.communities
+MC_mur_tax_2$Nsi
+MC_mur_tax_2$N
+MC_mur_tax_2$Nspecies
+MC_mur_tax_2$Ni
+MC_mur_tax_2$SampleCoverage
+MC_mur_tax_2$SampleCoverage.communities
 ```
 
 ## Region 3
@@ -59,18 +59,18 @@ MC_mur_tax_tiz$SampleCoverage.communities
 ### Calakmul
 
 ```{r}
-mur_tax_cal <- mur_tax[, 8:10]
-mur_tax_cal <- subset(mur_tax_cal, rowSums(mur_tax_cal != 0) > 0)
-View(mur_tax_cal)
+mur_tax_3 <- mur_tax[, 8:10]
+mur_tax_3 <- subset(mur_tax_3, rowSums(mur_tax_3 != 0) > 0)
+View(mur_tax_3)
 
-MC_mur_tax_cal <- MetaCommunity(mur_tax_cal)
+MC_mur_tax_3 <- MetaCommunity(mur_tax_3)
 
-MC_mur_tax_cal$Nsi
-MC_mur_tax_cal$N
-MC_mur_tax_cal$Nspecies
-MC_mur_tax_cal$Ni
-MC_mur_tax_cal$SampleCoverage
-MC_mur_tax_cal$SampleCoverage.communities
+MC_mur_tax_3$Nsi
+MC_mur_tax_3$N
+MC_mur_tax_3$Nspecies
+MC_mur_tax_3$Ni
+MC_mur_tax_3$SampleCoverage
+MC_mur_tax_3$SampleCoverage.communities
 ```
 
 
