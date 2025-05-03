@@ -5,9 +5,9 @@
 mer_tax_mur2 <- data.frame(
   Assemblage = rep(c("ENES", "UCU", "APA"), each = 3),
   Diversity = rep(c("q0", "q1", "q2"), 3),
-  Value = c(4.000000, 3.888323, 3.789474, 
-            3.000000, 2.017144, 1.808973, 
-            1.000000, 1.000000, 1.000000))
+  Value = c(4.00, 3.89, 3.79, 
+            3.00, 2.02, 1.81, 
+            1.00, 1.00, 1.00))
 
 ggplot(mer_tax_mur2, aes(x = Diversity, y = Value, color = Assemblage, group = Assemblage)) +
   geom_point(size = 3, shape = 15) +
