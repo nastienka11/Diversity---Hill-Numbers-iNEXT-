@@ -1,40 +1,33 @@
 # iNEXT
 
 ## Region 1
-
-```{r}
 m_tax_1 <- iNEXT(mur_tax_1, q=c(0, 1, 2), datatype="abundance")
 m_tax_1$iNextEst$coverage_based
 
 m_tax_1_sub <- data.frame(m_tax_1$iNextEst$coverage_based)
 m_tax_1_sub <- subset(m_tax_1_sub, Method == "Observed")
 m_tax_1_sub
-```
+
 
 ## Region 2
-
-```{r}
 m_tax_2 <- iNEXT(mur_tax_2, q=c(0, 1, 2), datatype="abundance")
 m_tax_2$iNextEst$coverage_based
 
 m_tax_tiz_2 <- data.frame(m_tax_2$iNextEst$coverage_based)
 m_tax_tiz_2 <- subset(m_tax_2_sub, Method == "Observed")
 m_tax_tiz_2
-```
+
 
 ## Region 3
-
-```{r}
 m_tax_3 <- iNEXT(mur_tax_3, q=c(0, 1, 2), datatype="abundance")
 m_tax_3$iNextEst$coverage_based
 
 m_tax_cal_3 <- data.frame(m_tax_3$iNextEst$coverage_based)
 m_tax_cal_3 <- subset(m_tax_3_sub, Method == "Observed")
 m_tax_cal_3
-```
+
 
 ### Export
-
 mur_iNEXT_tax <- "mur_iNEXT_tax.xlsx"
 wb <- createWorkbook()
 
