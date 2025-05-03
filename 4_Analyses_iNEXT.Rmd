@@ -3,32 +3,48 @@
 ## Region 1
 
 ```{r}
-m_tax_mer <- iNEXT(mur_tax_mer, q=c(0, 1, 2), datatype="abundance")
-m_tax_mer$iNextEst$coverage_based
+m_tax_1 <- iNEXT(mur_tax_1, q=c(0, 1, 2), datatype="abundance")
+m_tax_1$iNextEst$coverage_based
 
-m_tax_mer_sub <- data.frame(m_tax_mer$iNextEst$coverage_based)
-m_tax_mer_sub <- subset(m_tax_mer_sub, Method == "Observed")
-m_tax_mer_sub
+m_tax_1_sub <- data.frame(m_tax_1$iNextEst$coverage_based)
+m_tax_1_sub <- subset(m_tax_1_sub, Method == "Observed")
+m_tax_1_sub
 ```
 
 ## Region 2
 
 ```{r}
-m_tax_tiz <- iNEXT(mur_tax_tiz, q=c(0, 1, 2), datatype="abundance")
-m_tax_tiz$iNextEst$coverage_based
+m_tax_2 <- iNEXT(mur_tax_2, q=c(0, 1, 2), datatype="abundance")
+m_tax_2$iNextEst$coverage_based
 
-m_tax_tiz_sub <- data.frame(m_tax_tiz$iNextEst$coverage_based)
-m_tax_tiz_sub <- subset(m_tax_tiz_sub, Method == "Observed")
-m_tax_tiz_sub
+m_tax_tiz_2 <- data.frame(m_tax_2$iNextEst$coverage_based)
+m_tax_tiz_2 <- subset(m_tax_2_sub, Method == "Observed")
+m_tax_tiz_2
 ```
 
 ## Region 3
 
 ```{r}
-m_tax_cal <- iNEXT(mur_tax_cal, q=c(0, 1, 2), datatype="abundance")
-m_tax_cal$iNextEst$coverage_based
+m_tax_3 <- iNEXT(mur_tax_3, q=c(0, 1, 2), datatype="abundance")
+m_tax_3$iNextEst$coverage_based
 
-m_tax_cal_sub <- data.frame(m_tax_cal$iNextEst$coverage_based)
-m_tax_cal_sub <- subset(m_tax_cal_sub, Method == "Observed")
-m_tax_cal_sub
+m_tax_cal_3 <- data.frame(m_tax_3$iNextEst$coverage_based)
+m_tax_cal_3 <- subset(m_tax_3_sub, Method == "Observed")
+m_tax_cal_3
 ```
+
+### Export
+
+mur_iNEXT_tax <- "mur_iNEXT_tax.xlsx"
+wb <- createWorkbook()
+
+addWorksheet(wb, "tax_1")
+writeData(wb, "tax_1", m_tax_1$iNextEst$coverage_based)
+
+addWorksheet(wb, "tax_2")
+writeData(wb, "tax_2", m_tax_2$iNextEst$coverage_based)
+
+addWorksheet(wb, "tax_3")
+writeData(wb, "tax_3", m_tax_3$iNextEst$coverage_based)
+
+saveWorkbook(wb, mur_iNEXT_tax, overwrite = TRUE)
