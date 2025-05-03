@@ -1,0 +1,10 @@
+#### iNEXT
+
+```{r}
+m_tax_mer <- iNEXT(mur_tax_mer, q=c(0, 1, 2), datatype="abundance")
+m_tax_mer$iNextEst$coverage_based
+
+m_tax_mer_sub <- data.frame(m_tax_mer$iNextEst$coverage_based)
+m_tax_mer_sub <- subset(m_tax_mer_sub, Method == "Observed")
+m_tax_mer_sub
+```
