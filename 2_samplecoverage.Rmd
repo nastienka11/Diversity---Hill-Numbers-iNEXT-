@@ -55,6 +55,22 @@ MC_mur_tax_tiz$SampleCoverage.communities
 ## Region 3
 
 
+#.
+### Calakmul
 
+```{r}
+mur_tax_cal <- mur_tax[, 8:10]
+mur_tax_cal <- subset(mur_tax_cal, rowSums(mur_tax_cal != 0) > 0)
+View(mur_tax_cal)
+
+MC_mur_tax_cal <- MetaCommunity(mur_tax_cal)
+
+MC_mur_tax_cal$Nsi
+MC_mur_tax_cal$N
+MC_mur_tax_cal$Nspecies
+MC_mur_tax_cal$Ni
+MC_mur_tax_cal$SampleCoverage
+MC_mur_tax_cal$SampleCoverage.communities
+```
 
 
