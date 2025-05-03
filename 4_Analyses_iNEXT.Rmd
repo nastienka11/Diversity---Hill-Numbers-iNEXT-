@@ -1,0 +1,34 @@
+# iNEXT
+
+## Region 1
+
+```{r}
+m_tax_mer <- iNEXT(mur_tax_mer, q=c(0, 1, 2), datatype="abundance")
+m_tax_mer$iNextEst$coverage_based
+
+m_tax_mer_sub <- data.frame(m_tax_mer$iNextEst$coverage_based)
+m_tax_mer_sub <- subset(m_tax_mer_sub, Method == "Observed")
+m_tax_mer_sub
+```
+
+## Region 2
+
+```{r}
+m_tax_tiz <- iNEXT(mur_tax_tiz, q=c(0, 1, 2), datatype="abundance")
+m_tax_tiz$iNextEst$coverage_based
+
+m_tax_tiz_sub <- data.frame(m_tax_tiz$iNextEst$coverage_based)
+m_tax_tiz_sub <- subset(m_tax_tiz_sub, Method == "Observed")
+m_tax_tiz_sub
+```
+
+## Region 3
+
+```{r}
+m_tax_cal <- iNEXT(mur_tax_cal, q=c(0, 1, 2), datatype="abundance")
+m_tax_cal$iNextEst$coverage_based
+
+m_tax_cal_sub <- data.frame(m_tax_cal$iNextEst$coverage_based)
+m_tax_cal_sub <- subset(m_tax_cal_sub, Method == "Observed")
+m_tax_cal_sub
+```
