@@ -1,28 +1,21 @@
 # qD
 
 ## Region 1
-
-```{r}
 qDmur_tax_1 <- estimateD(mur_tax_1, datatype="abundance", base="coverage", level=NULL, nboot=10000)
 qDmur_tax_1
-```
+
 
 ## Region 2
-
-```{r}
 qDmur_tax_2 <- estimateD(mur_tax_2, datatype="abundance", base="coverage", level=NULL, nboot=10000)
 qDmur_tax_2
-```
+
 
 # Region 3
-
-```{r}
 qDmur_tax_3 <- estimateD(mur_tax_3, datatype="abundance", base="coverage", level=NULL, nboot=10000)
 qDmur_tax_3
-```
+
 
 ### Export
-
 mur_qD_tax <- rbind(qDmur_tax_1, qDmur_tax_2, qDmur_tax_3)
 write.xlsx(mur_qD_tax, file = "mur_qD_tax.xlsx")
 
