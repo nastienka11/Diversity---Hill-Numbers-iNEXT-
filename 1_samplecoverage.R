@@ -1,27 +1,7 @@
----
-title: "Diversidad_Hill_Tax"
-author: "Nastienka Yael Perez Jimenez"
-date: "2024-03-21"
-output: html_document
----
-
-```{r}
-library(tidyverse)
-library(iNEXT)
-library(entropart)
-```
-
-
-```{r}
-mur_tax <- read.csv("mur_df.csv", header = TRUE)
-View(mur_tax)
-```
 
 # Sample Coverage
 
 ## Region 1
-
-```{r}
 mur_tax_1 <- mur_tax[, 1:4]
 mur_tax_1 <- subset(mur_tax_1, rowSums(mur_tax_1 != 0) > 0)
 View(mur_tax_1)
@@ -34,10 +14,9 @@ MC_mur_tax_1$Nspecies
 MC_mur_tax_1$Ni
 MC_mur_tax_1$SampleCoverage
 MC_mur_tax_1$SampleCoverage.communities
-```
+
 
 ## Region 2
-```{r}
 mur_tax_2 <- mur_tax[, 5:7]
 mur_tax_2 <- subset(mur_tax_2, rowSums(mur_tax_2 != 0) > 0)
 View(mur_tax_2)
@@ -50,15 +29,9 @@ MC_mur_tax_2$Nspecies
 MC_mur_tax_2$Ni
 MC_mur_tax_2$SampleCoverage
 MC_mur_tax_2$SampleCoverage.communities
-```
+
 
 ## Region 3
-
-
-#.
-### Calakmul
-
-```{r}
 mur_tax_3 <- mur_tax[, 8:10]
 mur_tax_3 <- subset(mur_tax_3, rowSums(mur_tax_3 != 0) > 0)
 View(mur_tax_3)
@@ -71,6 +44,5 @@ MC_mur_tax_3$Nspecies
 MC_mur_tax_3$Ni
 MC_mur_tax_3$SampleCoverage
 MC_mur_tax_3$SampleCoverage.communities
-```
 
 
