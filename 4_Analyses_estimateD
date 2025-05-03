@@ -1,6 +1,0 @@
-### qD
-
-```{r}
-qDmur_tax_mer <- estimateD(mur_tax_mer, datatype="abundance", base="coverage", level=NULL, nboot=10000)
-qDmur_tax_mer
-```
